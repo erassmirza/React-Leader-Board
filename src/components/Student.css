@@ -42,6 +42,22 @@
     left: 7px;
     cursor: pointer;
 }
+.subtScoreBtn {
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -3px;
+    left: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.addScoreBtn:hover, .subtScoreBtn:hover {
+    background-color: green;
+}
 .uniName span {
     background-color: green;
     text-transform: uppercase;

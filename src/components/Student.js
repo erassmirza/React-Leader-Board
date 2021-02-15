@@ -7,7 +7,8 @@ export class Student extends Component {
         super();
         this.state = {
             score: 0,
-            success: false
+            success: false,
+            failure: false
         }
     }
 
@@ -32,6 +33,23 @@ export class Student extends Component {
                         }
                     )
                 }
+                
+            }
+        )
+    }
+    subtScore() {
+        this.setState (
+            {
+                score : this.state.score-1
+            },
+            () => {
+                if (this.state.score < 340) {
+                    this.setState (
+                        {
+                            failure: true
+                        }
+                    )
+                }
             }
         )
     }
@@ -39,11 +57,17 @@ export class Student extends Component {
     render() {
 
         const isSuccess = this.state.success;
+        const isFailure = this.state.failure;
+        
         let text;
         if (isSuccess) {
             text = <span>Success</span>
-        } else {
-            text = '';
+        }
+        else if (isFailure) {
+            text = <span>Failed</span>
+        }
+        else {
+            text = ''
         }
 
         return (
@@ -52,6 +76,7 @@ export class Student extends Component {
                     <h2 className="studentName">
                         {this.props.name}
                         <button className="addScoreBtn" onClick={ () => this.addScore() }>+</button>
+                        <button className="subtScoreBtn" onClick={ () => this.subtScore() }>-</button>
                     </h2>
                     <p className="uniName">{this.props.uni} {text}</p>
                 </div>
