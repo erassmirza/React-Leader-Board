@@ -1,0 +1,55 @@
+.student {
+    width: 700px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.left{
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+.right {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+.studentName {
+    margin: 0px;
+    padding: 0px;
+}
+.uniName {
+    margin: 0px;
+    padding: 0px;
+}
+.score {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+.addScoreBtn {
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -3px;
+    left: 7px;
+    cursor: pointer;
+}
+.uniName span {
+    background-color: green;
+    text-transform: uppercase;
+    color: white;
+    padding: 1px 4px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 10px;
+}
